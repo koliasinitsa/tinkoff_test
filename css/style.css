@@ -1,0 +1,633 @@
+@import url('./reset.css');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import '@material/ripple/dist/mdc.ripple.css';
+
+body {
+    max-width: 555px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.name-section {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+
+}
+
+/* Основной контейнер для шапки */
+
+
+/* Контейнер для размещения элементов в строку */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    Width: 555px;
+    /* Height: 124px; */
+    margin-bottom: 20px;
+
+}
+
+.profile-picture img {
+    width: 124px;
+    height: 126px;
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+.intro {
+    border-radius: 12px;
+    justify-content: space-between;
+    padding: 12px;
+
+    background: #F0F0F0;
+
+}
+
+.intro-content {
+    margin-top: 28px;
+}
+
+.intro-hello {
+    font-family: Poppins;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 15px;
+    text-align: left;
+
+}
+
+.intro h1 {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14.56px;
+    text-align: left;
+
+}
+
+.intro-brand {
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    margin-top: 6px;
+
+}
+
+/* Секция языков */
+.languages {
+    background-color: #F0F0F0;
+    padding: 15px;
+    border-radius: 10px;
+    width: 297px;
+    /* Ширина контейнера */
+}
+
+.languages-content {
+    margin-top: 16px;
+}
+
+
+.languages-content li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    font-family: Poppins;
+    font-size: 10px;
+    font-weight: 500;
+    gap: 10px;
+
+
+}
+
+
+.languages .level {
+    width: 100px;
+    /* Длина зеленой полоски */
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.languages .level::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #00c853;
+    /* Зеленый цвет */
+}
+
+/* Разные уровни владения языком */
+.languages .level.advanced::after {
+    width: 100%;
+}
+
+.languages .level.intermediate::after {
+    width: 75%;
+}
+
+.languages .level.basic::after {
+    width: 50%;
+}
+
+
+
+
+
+/* Основные секции */
+.main {
+    width: 268px;
+    height: 289px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.main-left {
+    width: 268px;
+    height: 303px;
+    background-color: #F0F0F0;
+    border-radius: 12px;
+}
+
+.main-right {
+    width: 268px;
+    margin-left: 20px;
+}
+
+
+
+
+/* Секция Education */
+/* .education {
+    width: 268px;
+    height: 289px;
+    border: 3px solid yellow;
+    background-color: #F0F0F0;
+    
+} */
+
+.education-list {
+    display: flex;
+    flex-direction: row;
+    background-color: #F0F0F0;
+    border-radius: 12px;
+    padding: 16px 8px 12px 12px;
+
+}
+
+.education-item {
+    width: 100px;
+    height: 95px;
+    border-radius: 10px;
+    padding: 8px;
+
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.education-item-like {
+    background: #28D979;
+    color: #FFFFFF;
+}
+
+.education-item__left {
+    margin-right: 16px;
+}
+
+.education-item__left li:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.education h2 {
+    padding-top: 12px;
+    margin-left: 12px;
+    color: #000000;
+}
+
+/* background-image: url('../assets/Vector.svg'); */
+.education h3 {
+    font-family: Poppins;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 15px;
+    text-align: left;
+
+}
+
+.education-item .education-item__header img {
+    display: none;
+}
+
+.education-item.education-item-like .education-item__header img {
+    display: block;
+}
+
+.education-item.education-item-like {
+    background: #28D979;
+    color: #FFFFFF;
+}
+
+.education-item__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    height: 15px;
+    margin-bottom: 8px;
+}
+
+.education-item time {
+    font-family: Poppins;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 15px;
+    text-align: center;
+}
+
+.education-p {
+    max-width: 100px;
+    font-size: 8px;
+    color: #149063;
+    margin-bottom: 8px;
+}
+
+.education-city {
+    font-size: 8px;
+    line-height: 12px;
+    font-weight: 400;
+
+    margin-top: auto;
+    margin-bottom: 8px;
+}
+
+/* Основной контейнер для правой части */
+
+
+/* Секция интересов */
+.interests {
+    width: 267px;
+    height: 177px;
+    padding: 12px 0px 0px 0px;
+    gap: 16px;
+    border-radius: 12px;
+    background: #F0F0F0;
+    margin-bottom: 20px;
+}
+
+.intersts-content {
+    height: 116px;
+
+    margin-top: 16px;
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+
+.interests h2 {
+    margin-left: 12px;
+}
+
+.interests ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px;
+    margin: 0;
+}
+
+.interests li {
+
+    font-family: Poppins;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: center;
+
+    padding: 4px 10px;
+    border-radius: 12px;
+    background: #ffffff;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+
+/* Секция контактов */
+.contact {
+    width: 243px;
+    height: 70px;
+    padding: 12px;
+    border-radius: 12px;
+    justify-content: space-between;
+    opacity: 0px;
+    background: #000000;
+
+}
+
+.contact h2 {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: left;
+
+    color: #FFFFFF;
+}
+
+
+.contact-item {
+    display: flex;
+    flex-direction: row;
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 15px;
+    gap: 19px;
+    color: #fff;
+
+}
+
+.contact-item p {
+    font-family: Poppins;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: left;
+
+}
+
+.contact-item p:first-child::after {
+    content: "|";
+    margin-left: 16px;
+}
+
+
+
+
+.lowwer {
+    max-width: 555px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.tools {
+    flex: 1;
+    background: #F0F0F0;
+    height: 359px;
+    border-radius: 12px;
+}
+
+.tools-section {
+    /* Цвет и стиль границы можно изменить */
+    border-radius: 8px;
+    /* Закругленные углы */
+    padding: 20px;
+}
+
+.tools h2 {
+    margin: 12px 0px 0px 12px;
+}
+
+.tool-categories {
+    display: flex;
+    flex-direction: column;
+    width: 76px;
+    gap: 12px;
+}
+
+.category {
+    position: relative;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+}
+
+
+
+.category-name {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 11px;
+    background-color: #000;
+    padding: 2px 6px 2px 6px;
+    border-radius: 59px;
+    color: #FFFFFF;
+    text-transform: lowercase;
+    /* Приводим текст к нижнему регистру */
+    font-family: Poppins;
+    font-size: 5px;
+    font-weight: 500;
+    line-height: 11px;
+    text-align: center;
+
+}
+
+.category-name:not(:first-child) {
+    margin-top: 6px;
+}
+
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Два столбца одинаковой ширины */
+    gap: 10px;
+    /* Расстояние между элементами */
+    padding: 10px;
+    margin-top: 10px;
+    list-style: none;
+    /* Убираем маркеры списка */
+}
+
+.category-list li {
+    display: flex;
+    justify-content: center;
+    /* Центрируем элементы по горизонтали */
+    align-items: center;
+    /* Центрируем элементы по вертикали */
+
+}
+
+
+.experience {
+
+    width: 411px;
+    height: 359px;
+    border-radius: 12px;
+    opacity: 0px;
+    background: #F0F0F0;
+
+}
+
+.experience-section h2 {
+    margin: 12px 0px 16px 12px;
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin: 0 12px 34px 12px;
+}
+
+.experience-list-item {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 0 8px 8px 8px;
+}
+
+.experience-list-item time {
+    font-family: Poppins;
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 12px;
+    text-align: center;
+}
+
+.experience-list-item span {
+    width: 61px;
+    height: 12px;
+    border-radius: 59px;
+    background: #7E731266;
+    padding: 2px;
+    color: #DDF163;
+    font-family: Poppins;
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 12px;
+    text-align: center;
+
+
+}
+.experience-item__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Опционально: выравнивание элементов по вертикали */
+    padding-top: 8px;
+}
+
+.most-recent {
+    margin-left: auto; /* Автоматическое размещение слева */
+    margin-right: 8px; /* Правый отступ 8px */
+}
+
+
+.experience-item__name {
+    font-family: Poppins;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 15px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.experience-content {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.experience-like {
+    background: #28D979;
+    color: #FFFFFF;
+}
+
+.content-left p {
+    font-family: Poppins;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 12px;
+    align-items: start;
+    text-align: left;
+
+}
+
+.content-right {
+    width: 240px;
+}
+
+.content-right p {
+    font-family: Poppins;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* Кнопка Download */
+#downloadBtn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+#downloadBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Адаптивность */
+@media (max-width: 375px) {
+  
+  .header-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    max-width: 375px;
+  }
+
+
+
+  .main {
+    display: inline-block;
+  }
+.tools {
+  max-width: 300px;
+ 
+}
+
+.tools-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .lowwer {
+    display: grid;
+  }
+
+
+  .experience-content {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+}
